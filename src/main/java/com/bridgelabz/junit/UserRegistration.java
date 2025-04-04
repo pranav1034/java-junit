@@ -5,7 +5,7 @@ public class UserRegistration {
         if (username == null || username.isEmpty()) {
             throw new IllegalArgumentException("Username cannot be empty");
         }
-        if (email == null || !email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+        if (email == null || !email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9-]+\\.[a-zA-z]{2,}$")) {
             throw new IllegalArgumentException("Invalid email format");
         }
         if (password == null || password.length() < 8) {

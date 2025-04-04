@@ -1,9 +1,16 @@
 package com.bridgelabz.junit;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class UserRegistrationTest {
-    private final UserRegistration userRegistration = new UserRegistration();
+
+    private UserRegistration userRegistration;
+
+    @BeforeEach
+    public void setUp() {
+        userRegistration = new UserRegistration();
+    }
 
     @Test
     public void testValidUserRegistration() {
